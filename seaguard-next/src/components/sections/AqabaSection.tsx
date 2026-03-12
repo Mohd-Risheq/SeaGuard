@@ -14,8 +14,8 @@ export default function AqabaSection({ dict }: AqabaSectionProps) {
 
         <div className="aqaba-intro">
           <div className="aqaba-text">
-            <p>{dict.aqaba.intro1}</p>
-            <p>{dict.aqaba.intro2}</p>
+            <p>{dict.aqaba.text1}</p>
+            <p>{dict.aqaba.text2}</p>
           </div>
           <div className="aqaba-stats">
             {dict.aqaba.stats.map((stat: any, i: number) => (

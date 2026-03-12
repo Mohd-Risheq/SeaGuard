@@ -19,136 +19,208 @@ export function useGsapAnimations() {
     });
 
     function initAnimations(gsap: any, ScrollTrigger: any) {
-      // Hero animations
-      const heroTl = gsap.timeline({ delay: 0.5 });
+      // ========================================
+      // Hero — Cinematic entrance
+      // ========================================
+      const heroTl = gsap.timeline({ delay: 0.3 });
       heroTl
-        .from('.hero-title', { y: 60, opacity: 0, duration: 1, ease: 'power3.out' })
-        .from('.hero-subtitle', { y: 40, opacity: 0, duration: 0.8, ease: 'power3.out' }, '-=0.5')
+        .from('.hero-badge', { y: -30, opacity: 0, duration: 0.8, ease: 'power3.out' })
+        .from('.hero-title-main', { y: 80, opacity: 0, duration: 1.2, ease: 'power4.out' }, '-=0.4')
+        .from('.hero-subtitle', { y: 50, opacity: 0, duration: 0.9, ease: 'power3.out' }, '-=0.6')
         .from('.hero-tagline', { y: 30, opacity: 0, duration: 0.8, ease: 'power3.out' }, '-=0.5')
-        .from('.hero-cta', { y: 20, opacity: 0, duration: 0.6, ease: 'power3.out' }, '-=0.3')
-        .from('.hero-scroll-indicator', { opacity: 0, duration: 1 }, '-=0.2');
+        .from('.hero-cta-group', { y: 30, opacity: 0, duration: 0.7, ease: 'power3.out' }, '-=0.3')
+        .from('.hero-scroll-indicator', { opacity: 0, y: 20, duration: 1 }, '-=0.2')
+        .from('.hero-float', { opacity: 0, scale: 0, duration: 1.5, stagger: 0.3, ease: 'elastic.out(1, 0.5)' }, '-=1');
 
-      // Section headers
-      gsap.utils.toArray('.section-header').forEach((header: Element) => {
-        gsap.from(header.children, {
-          scrollTrigger: { trigger: header, start: 'top 85%', toggleActions: 'play none none reverse' },
-          y: 40, opacity: 0, duration: 0.8, stagger: 0.15, ease: 'power3.out',
-        });
+      // Hero parallax on scroll
+      gsap.to('.hero-content', {
+        scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 1 },
+        y: 150, opacity: 0, ease: 'none',
       });
 
-      // Aqaba Bay
-      gsap.from('.aqaba-text', {
+      gsap.to('.hero-depth-1', {
+        scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 1 },
+        y: 80, ease: 'none',
+      });
+
+      gsap.to('.hero-depth-2', {
+        scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 1 },
+        y: 40, ease: 'none',
+      });
+
+      gsap.to('.hero-float', {
+        scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 1 },
+        y: -60, rotation: 15, ease: 'none',
+      });
+
+      // ========================================
+      // Section headers — Dramatic reveals
+      // ========================================
+      gsap.utils.toArray('.section-header').forEach((header: Element) => {
+        const tl = gsap.timeline({
+          scrollTrigger: { trigger: header, start: 'top 85%', toggleActions: 'play none none reverse' },
+        });
+        tl.from(header.querySelector('.section-label'), { y: 20, opacity: 0, duration: 0.5, ease: 'power3.out' })
+          .from(header.querySelector('.section-title'), { y: 40, opacity: 0, duration: 0.7, ease: 'power3.out' }, '-=0.2')
+          .from(header.querySelector('.section-line'), { scaleX: 0, duration: 0.6, ease: 'power3.out' }, '-=0.3');
+      });
+
+      // ========================================
+      // Aqaba Bay — Staggered reveals
+      // ========================================
+      gsap.from('.aqaba-text p', {
         scrollTrigger: { trigger: '.aqaba-intro', start: 'top 80%', toggleActions: 'play none none reverse' },
-        x: -60, opacity: 0, duration: 1, ease: 'power3.out',
+        x: -60, opacity: 0, duration: 0.8, stagger: 0.2, ease: 'power3.out',
       });
 
       gsap.from('.stat-card', {
         scrollTrigger: { trigger: '.aqaba-stats', start: 'top 85%', toggleActions: 'play none none reverse' },
-        y: 40, opacity: 0, duration: 0.6, stagger: 0.15, ease: 'power3.out',
+        y: 50, opacity: 0, scale: 0.9, duration: 0.7, stagger: 0.15, ease: 'back.out(1.5)',
       });
 
       gsap.from('.dive-site-featured', {
         scrollTrigger: { trigger: '.dive-site-featured', start: 'top 85%', toggleActions: 'play none none reverse' },
-        y: 40, opacity: 0, duration: 0.8, ease: 'power3.out',
+        y: 50, opacity: 0, duration: 1, ease: 'power3.out',
       });
 
       gsap.from('.dive-site-card', {
         scrollTrigger: { trigger: '.dive-site-grid', start: 'top 85%', toggleActions: 'play none none reverse' },
-        y: 50, opacity: 0, scale: 0.95, duration: 0.7, stagger: 0.15, ease: 'power3.out',
+        y: 60, opacity: 0, scale: 0.92, duration: 0.8, stagger: 0.15, ease: 'power3.out',
       });
 
-      // About
+      // ========================================
+      // About — Cinematic entrance
+      // ========================================
       gsap.from('.about-image', {
         scrollTrigger: { trigger: '.about-content', start: 'top 80%', toggleActions: 'play none none reverse' },
-        x: -80, opacity: 0, duration: 1, ease: 'power3.out',
+        x: -100, opacity: 0, rotation: -5, duration: 1.2, ease: 'power3.out',
       });
 
       gsap.from('.about-text', {
         scrollTrigger: { trigger: '.about-content', start: 'top 80%', toggleActions: 'play none none reverse' },
-        x: 80, opacity: 0, duration: 1, ease: 'power3.out',
+        x: 100, opacity: 0, duration: 1.2, ease: 'power3.out',
       });
 
       gsap.utils.toArray('.timeline-item').forEach((item: Element, i: number) => {
         gsap.from(item, {
           scrollTrigger: { trigger: item, start: 'top 90%', toggleActions: 'play none none reverse' },
-          x: i % 2 === 0 ? -40 : 40, opacity: 0, duration: 0.6, ease: 'power3.out',
+          x: i % 2 === 0 ? -50 : 50, opacity: 0, duration: 0.7, ease: 'power3.out',
         });
       });
 
       gsap.from('.padi-section', {
         scrollTrigger: { trigger: '.padi-section', start: 'top 85%', toggleActions: 'play none none reverse' },
-        y: 40, opacity: 0, duration: 0.8, ease: 'power3.out',
+        y: 50, opacity: 0, duration: 1, ease: 'power3.out',
       });
 
-      // Fleet
+      // ========================================
+      // Fleet — 3D card reveals
+      // ========================================
       gsap.utils.toArray('.fleet-card').forEach((card: Element, i: number) => {
         gsap.from(card, {
           scrollTrigger: { trigger: card, start: 'top 85%', toggleActions: 'play none none reverse' },
-          x: i % 2 === 0 ? -60 : 60, y: 30, opacity: 0, duration: 0.8, ease: 'power3.out',
+          y: 80, opacity: 0, rotationY: i % 2 === 0 ? -10 : 10, duration: 1, ease: 'power3.out',
         });
       });
 
-      // Pricing
+      // ========================================
+      // Pricing — Pop-in with bounce
+      // ========================================
       gsap.from('.pricing-card', {
         scrollTrigger: { trigger: '.pricing-grid', start: 'top 85%', toggleActions: 'play none none reverse' },
-        y: 50, opacity: 0, rotation: 2, duration: 0.7, stagger: 0.1, ease: 'power3.out',
+        y: 60, opacity: 0, scale: 0.85, duration: 0.8, stagger: 0.1, ease: 'back.out(1.7)',
       });
 
-      // Experience
+      // ========================================
+      // Experience — Step-by-step reveal
+      // ========================================
       gsap.utils.toArray('.experience-step').forEach((step: Element) => {
-        gsap.from(step, {
+        const tl = gsap.timeline({
           scrollTrigger: { trigger: step, start: 'top 88%', toggleActions: 'play none none reverse' },
-          y: 40, opacity: 0, duration: 0.7, ease: 'power3.out',
         });
-      });
-
-      gsap.utils.toArray('.step-number').forEach((num: Element) => {
-        gsap.to(num, {
-          scrollTrigger: { trigger: num, start: 'top 85%', toggleActions: 'play none none reverse' },
-          opacity: 1, duration: 0.5, ease: 'power2.out',
-        });
+        const num = step.querySelector('.step-number');
+        const content = step.querySelector('.step-content');
+        if (num) tl.from(num, { scale: 0, opacity: 0, duration: 0.5, ease: 'back.out(2)' });
+        if (content) tl.from(content, { x: 60, opacity: 0, duration: 0.7, ease: 'power3.out' }, '-=0.2');
       });
 
       gsap.from('.trust-badge', {
         scrollTrigger: { trigger: '.trust-badges', start: 'top 85%', toggleActions: 'play none none reverse' },
-        y: 30, opacity: 0, scale: 0.9, duration: 0.5, stagger: 0.1, ease: 'power3.out',
+        y: 30, opacity: 0, scale: 0.8, duration: 0.6, stagger: 0.1, ease: 'back.out(2)',
       });
 
-      // Reviews
+      // ========================================
+      // Reviews — Fade-slide with stagger
+      // ========================================
       gsap.from('.review-card', {
         scrollTrigger: { trigger: '.reviews-carousel', start: 'top 85%', toggleActions: 'play none none reverse' },
-        y: 50, opacity: 0, duration: 0.7, stagger: 0.15, ease: 'power3.out',
+        y: 60, opacity: 0, rotationX: 10, duration: 0.9, stagger: 0.15, ease: 'power3.out',
       });
 
-      // Contact
+      // ========================================
+      // Contact — Split reveal
+      // ========================================
       gsap.from('.contact-item', {
         scrollTrigger: { trigger: '.contact-info', start: 'top 85%', toggleActions: 'play none none reverse' },
-        x: -40, opacity: 0, duration: 0.6, stagger: 0.1, ease: 'power3.out',
+        x: -50, opacity: 0, duration: 0.7, stagger: 0.12, ease: 'power3.out',
       });
 
       gsap.from('.contact-form-wrapper', {
         scrollTrigger: { trigger: '.contact-form-wrapper', start: 'top 85%', toggleActions: 'play none none reverse' },
-        x: 60, opacity: 0, duration: 0.8, ease: 'power3.out',
+        x: 80, opacity: 0, duration: 1, ease: 'power3.out',
       });
 
       gsap.from('.social-links', {
         scrollTrigger: { trigger: '.social-links', start: 'top 90%', toggleActions: 'play none none reverse' },
-        y: 20, opacity: 0, duration: 0.6, ease: 'power3.out',
+        y: 30, opacity: 0, duration: 0.6, ease: 'power3.out',
       });
 
-      // Stat numbers
+      // ========================================
+      // Numbers — Counter-like bounce
+      // ========================================
       gsap.utils.toArray('.stat-number').forEach((num: Element) => {
         gsap.from(num, {
           scrollTrigger: { trigger: num, start: 'top 90%', toggleActions: 'play none none reverse' },
-          scale: 0.5, opacity: 0, duration: 0.8, ease: 'elastic.out(1, 0.5)',
+          scale: 0.3, opacity: 0, duration: 1, ease: 'elastic.out(1, 0.4)',
         });
       });
 
-      // Price amounts
       gsap.utils.toArray('.price-amount').forEach((el: Element) => {
         gsap.from(el, {
           scrollTrigger: { trigger: el, start: 'top 90%', toggleActions: 'play none none reverse' },
-          scale: 0.5, opacity: 0, duration: 0.6, ease: 'back.out(2)',
+          scale: 0.3, opacity: 0, duration: 0.8, ease: 'back.out(3)',
+        });
+      });
+
+      // ========================================
+      // Glass card hover glow — CSS driven, but add subtle GSAP parallax
+      // ========================================
+      gsap.utils.toArray('.glass-card').forEach((card: Element) => {
+        gsap.to(card, {
+          scrollTrigger: {
+            trigger: card,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: 1,
+          },
+          y: -10,
+          ease: 'none',
+        });
+      });
+
+      // ========================================
+      // Wave dividers — Subtle parallax
+      // ========================================
+      gsap.utils.toArray('.wave-divider').forEach((wave: Element) => {
+        gsap.to(wave, {
+          scrollTrigger: {
+            trigger: wave,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: 1,
+          },
+          y: -15,
+          ease: 'none',
         });
       });
     }

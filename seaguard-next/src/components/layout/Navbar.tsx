@@ -55,15 +55,7 @@ export default function Navbar({ dict, locale }: NavbarProps) {
     <nav className={`navbar${scrolled ? ' scrolled' : ''}`} id="navbar">
       <div className="nav-container">
         <a href="#hero" className="nav-logo" onClick={(e) => handleNavClick(e, '#hero')}>
-          <span className="logo-icon">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-              <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2z" stroke="currentColor" strokeWidth="1.5"/>
-              <path d="M6 20c3-3 6-3 10 0s7 3 10 0" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-              <path d="M6 16c3-3 6-3 10 0s7 3 10 0" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.5"/>
-              <path d="M16 6v8l4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </span>
-          <span className="logo-text">{dict.nav.logoText}</span>
+          <img src="/SeaGuard/logo.svg" alt={dict.nav.logoText} className="logo-img" />
         </a>
 
         <div className={`nav-links${menuOpen ? ' active' : ''}`} id="navLinks">

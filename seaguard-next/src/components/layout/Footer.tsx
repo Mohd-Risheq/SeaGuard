@@ -9,7 +9,7 @@ export default function Footer({ dict }: { dict: any }) {
       <div className="container">
         <div className="footer-content">
           <div className="footer-brand">
-            <h3>{dict.footer.brand.name}</h3>
+            <img src="/SeaGuard/logo.svg" alt={dict.footer.brand.name} className="footer-logo" />
             <p>{dict.footer.brand.description}</p>
           </div>
           <div className="footer-links">

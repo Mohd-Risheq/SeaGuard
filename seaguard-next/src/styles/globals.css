@@ -193,20 +193,17 @@ img {
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  color: var(--white);
   z-index: 1001;
 }
 
-.logo-icon {
-  color: var(--teal-light);
+.logo-img {
+  height: 52px;
+  width: auto;
+  transition: all var(--transition);
 }
 
-.logo-text {
-  font-family: var(--font-heading);
-  font-size: 1.4rem;
-  font-weight: 700;
-  letter-spacing: 1px;
+.navbar.scrolled .logo-img {
+  height: 40px;
 }
 
 .nav-links {
@@ -1420,6 +1417,12 @@ img {
   margin-bottom: 40px;
 }
 
+.footer-logo {
+  height: 70px;
+  width: auto;
+  margin-bottom: 16px;
+}
+
 .footer-brand h3 {
   font-family: var(--font-heading);
   font-size: 1.5rem;
@@ -1765,7 +1768,6 @@ body.font-arabic .footer-contact h4,
 body.font-arabic .stat-number,
 body.font-arabic .timeline-year,
 body.font-arabic .fleet-year,
-body.font-arabic .section-label,
-body.font-arabic .logo-text {
+body.font-arabic .section-label {
   font-family: 'Playfair Display', var(--font-arabic), serif;
 }

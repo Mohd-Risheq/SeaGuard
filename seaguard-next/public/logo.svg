@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" fill="none">
+  <!-- Background shape — angular tent/wave peaks -->
+  <path d="M0 120 L0 50 L55 0 L100 45 L145 0 L200 50 L200 120 Z" fill="#1a1a1a"/>
+
+  <!-- Teal wave accents inside the peaks -->
+  <path d="M10 110 L10 55 L55 12 L95 48 L55 12" fill="none" stroke="#2dd4bf" stroke-width="3" opacity="0.9"/>
+  <path d="M15 108 L15 58 L55 18 L90 50" fill="none" stroke="#1a8a8a" stroke-width="2" opacity="0.6"/>
+  <path d="M100 48 L140 12 L185 55 L185 110" fill="none" stroke="#2dd4bf" stroke-width="3" opacity="0.9"/>
+  <path d="M105 50 L140 18 L180 58 L180 108" fill="none" stroke="#1a8a8a" stroke-width="2" opacity="0.6"/>
+
+  <!-- Seahorse silhouette (right side) -->
+  <g transform="translate(148, 22) scale(0.55)" fill="white">
+    <!-- Seahorse body -->
+    <path d="M30 5 C28 2, 22 0, 18 3 C14 6, 16 12, 20 14 C22 15, 25 14, 26 12 C27 10, 25 8, 23 9 C22 10, 23 11, 24 11
+    M20 14 C18 16, 15 20, 15 25 C15 30, 18 33, 16 38 C14 43, 10 45, 12 50 C14 55, 18 53, 20 50 C22 47, 19 44, 17 45
+    M15 25 C12 26, 9 28, 8 31 C7 34, 9 36, 12 35
+    M15 30 C12 32, 10 34, 10 37
+    M16 35 C13 37, 11 40, 12 42
+    M16 40 C14 42, 13 44, 13 47"
+    stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Crown/crest -->
+    <path d="M22 3 C24 0, 28 1, 30 5 M25 2 C26 -1, 29 0, 30 3" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- SEA text -->
+  <text x="30" y="78" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="30" fill="white" letter-spacing="3">SEA</text>
+
+  <!-- GUARD text -->
+  <text x="20" y="103" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="30" fill="white" letter-spacing="3">GUARD</text>
+
+  <!-- Aqaba script text -->
+  <text x="115" y="112" font-family="Georgia, serif" font-style="italic" font-size="18" fill="#2dd4bf" letter-spacing="1">Aqaba</text>
+</svg>

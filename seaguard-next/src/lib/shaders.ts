@@ -1,0 +1,63 @@
+export const vertexShader = `
+  uniform float uTime;
+  uniform vec2 uMouse;
+  varying vec2 vUv;
+  varying float vElevation;
+  varying vec3 vPosition;
+
+  void main() {
+    vUv = uv;
+    vec3 pos = position;
+
+    // Layered sine wave displacement
+    float wave1 = sin(pos.x * 0.8 + uTime * 0.6) * 0.3;
+    float wave2 = sin(pos.y * 0.6 + uTime * 0.4) * 0.2;
+    float wave3 = sin((pos.x + pos.y) * 0.5 + uTime * 0.8) * 0.15;
+    float wave4 = sin(pos.x * 1.5 - uTime * 0.3) * cos(pos.y * 1.2 + uTime * 0.5) * 0.1;
+
+    float elevation = wave1 + wave2 + wave3 + wave4;
+    pos.z += elevation;
+
+    vElevation = elevation;
+    vPosition = pos;
+
+    gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
+  }
+`;
+
+export const fragmentShader = `
+  uniform float uTime;
+  uniform vec3 uDeepColor;
+  uniform vec3 uShallowColor;
+  uniform vec3 uFresnelColor;
+  varying vec2 vUv;
+  varying float vElevation;
+  varying vec3 vPosition;
+
+  void main() {
+    // Base color mix based on elevation
+    float mixFactor = (vElevation + 0.5) * 0.7;
+    vec3 color = mix(uDeepColor, uShallowColor, clamp(mixFactor, 0.0, 1.0));
+
+    // Caustic pattern
+    float caustic1 = sin(vUv.x * 20.0 + uTime * 0.5) * sin(vUv.y * 20.0 + uTime * 0.3);
+    float caustic2 = sin(vUv.x * 15.0 - uTime * 0.4) * sin(vUv.y * 12.0 - uTime * 0.6);
+    float caustics = (caustic1 + caustic2) * 0.05;
+    color += vec3(caustics) * uFresnelColor;
+
+    // Edge glow / Fresnel approximation
+    float fresnel = pow(1.0 - abs(vElevation * 0.8), 3.0) * 0.15;
+    color += uFresnelColor * fresnel;
+
+    // Shimmer
+    float shimmer = sin(vPosition.x * 8.0 + uTime * 2.0) * sin(vPosition.y * 6.0 + uTime * 1.5) * 0.03;
+    color += vec3(shimmer);
+
+    // Depth fade at edges
+    float edgeFade = smoothstep(0.0, 0.15, vUv.x) * smoothstep(1.0, 0.85, vUv.x)
+                   * smoothstep(0.0, 0.15, vUv.y) * smoothstep(1.0, 0.85, vUv.y);
+    color *= edgeFade * 0.5 + 0.5;
+
+    gl_FragColor = vec4(color, 0.85);
+  }
+`;

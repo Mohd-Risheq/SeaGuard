@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "title": "Sea Guard | Diving & Snorkeling in Aqaba, Jordan",
+    "description": "Sea Guard - Diving and Snorkeling at Jordan's Aqaba Coral Reefs. Enjoy your adventure with professional divers and high quality service.",
+    "keywords": "Sea Guard, diving, snorkeling, Aqaba, Jordan, Red Sea, boat trips, PADI, coral reefs"
+  },
+  "nav": {
+    "logoText": "Sea Guard",
+    "aqaba": "Aqaba Bay",
+    "about": "About",
+    "fleet": "Our Fleet",
+    "pricing": "Pricing",
+    "experience": "Experience",
+    "reviews": "Reviews",
+    "contact": "Contact",
+    "langToggle": "عربي",
+    "langHref": "/ar",
+    "hamburgerLabel": "Toggle navigation menu"
+  },
+  "preloader": { "text": "Sea Guard" },
+  "hero": {
+    "title": "Sea Guard",
+    "subtitle": "Explore the Wonders of Deep Sea",
+    "tagline": "Diving and Snorkeling at Jordan's Aqaba Coral Reefs",
+    "cta": "Book Your Adventure",
+    "scrollText": "Scroll to explore"
+  },
+  "aqaba": {
+    "label": "Discover",
+    "title": "Aqaba Bay",
+    "intro1": "Four countries share Aqaba Bay. The Jordanian part is 26 km long; it spreads from the Jordanian border to the Saudi Arabian border. On the seashore you can find free beaches, hotel beaches, the port of the Royal Yacht Club, several cargo ship ports, and a protected area which belongs to the University.",
+    "intro2": "The fauna of the Aqaba Bay is very colorful, full of undersea life, so beautiful that it reminds us — a paradise could exist also on Earth.",
+    "stats": [
+      { "number": "26", "label": "km of Coastline" },
+      { "number": "4", "label": "Countries Share the Bay" },
+      { "number": "27m", "label": "Max Dive Depth" }
+    ],
+    "diveSitesTitle": "Famous Dive Sites",
+    "featured": {
+      "name": "Japanese Garden",
+      "tag": "Most Popular",
+      "description": "The most known diving place, called Japanese Garden for its fascinating fauna. Here you can observe fantastic fishes with unbelievable colors — butterflyfish, scorpionfish, lionfish, cornet fish, stonefish, clown fish, grey moray — and the miraculous water life. You can also find hard and soft corals of many colors and shapes, giant gorgon, plant animals and many more life-forms."
+    },
+    "sites": [
+      { "depth": "9-27m", "name": "Cedar Pride Wreck", "description": "A 70m+ international cargo ship, sunken in 1985 to create a site for wreck divers. Situated onto two big coral reefs so divers can swim under it. The ship lies at its left side, parallel to the seashore, surrounded by beautiful corals, giant shells and various fishes." },
+      { "depth": "Deep", "name": "C-130 Hercules", "description": "A spectacular artificial wreck of a C-130 Hercules transport aircraft, submerged to create a unique diving experience in the Red Sea waters of Aqaba." },
+      { "depth": "Varied", "name": "The Tank", "description": "An anti-aircraft vehicle known as \"the tank,\" another fascinating artificial reef that has become home to vibrant marine life and colorful coral formations." }
+    ]
+  },
+  "about": {
+    "label": "Our Story",
+    "title": "About Sea Guard",
+    "founderName": "Yazan Alsaed",
+    "founderBadge": "PADI Instructor",
+    "lead": "Sea Guard offers diving and snorkeling trips at daytime as well as romantic trips at sunset. Founded in 2003, headquartered in Aqaba, the only seashore city of Jordan.",
+    "text1": "The beginnings of Sea Guard date back to 1993 when one young enthusiast, Yazan Alsaed, started to dive. He made his first open water dive exam in 1994 and in 1996 got divemaster degree. He worked as assistant instructor since 1998 and since 2000 he has been PADI open water dive instructor.",
+    "text2": "In 2003, Yazan Alsaed formally established Sea Guard as a private company. Years of experience allow us to suggest safe conditions for the trips. We organize our trips in small groups to provide high quality of services for our clients.",
+    "timeline": [
+      { "year": "1993", "text": "Yazan Alsaed begins his diving journey" },
+      { "year": "1996", "text": "Achieves Divemaster certification" },
+      { "year": "2000", "text": "Becomes PADI Open Water Dive Instructor" },
+      { "year": "2003", "text": "Sea Guard officially established" },
+      { "year": "2004", "text": "First boat \"Yasmena\" joins the fleet" },
+      { "year": "2008", "text": "Sight-seeing boat \"Alissar\" in Phoenician style" },
+      { "year": "2011", "text": "Third boat \"Barakah\" expands the fleet" }
+    ],
+    "padi": {
+      "title": "PADI Certified",
+      "description": "The largest diving training organization in the world, presented in more than 175 countries. PADI diver training is based on gradual teaching — from Open Water Diver to Advanced, Specialty, Medic First Aid and Rescue Diver. Anywhere you go on your diver trips, local diving communities recognize your PADI license worldwide."
+    }
+  },
+  "fleet": {
+    "label": "Our Vessels",
+    "title": "The Fleet",
+    "boats": [
+      { "year": "Since 2004", "name": "Yasmena", "description": "Our first diving and snorkeling boat, accommodating up to 25 passengers. Yasmena has been the heart of Sea Guard, hosting thousands of dives across the beautiful waters of Aqaba Bay.", "tags": ["Diving", "Snorkeling", "25 Guests"] },
+      { "year": "Since 2008", "name": "Alissar", "description": "Our sight-seeing boat built in a must-see Phoenician style. Alissar offers a unique experience combining historical design with modern comfort for unforgettable sunset and leisure cruises.", "tags": ["Sight-seeing", "Phoenician Style", "Sunset Cruises"] },
+      { "year": "Since 2011", "name": "Barakah", "description": "Our newest vessel featuring a spacious sun deck for relaxation and sunbathing. Barakah brings high-level comfort to your Red Sea adventure with premium amenities.", "tags": ["Sun Deck", "Premium", "Full Service"] }
+    ]
+  },
+  "pricing": {
+    "label": "Adventures",
+    "title": "Services & Pricing",
+    "description": "Ready to explore the underwater wonders of Aqaba? Join us for an unforgettable snorkeling and diving experience!",
+    "services": [
+      { "name": "Snorkeling Full Day", "description": "Full day boat trip, 10:00 AM - 2:00 PM with lunch and refreshments", "amount": "40", "currency": "JOD", "popular": false },
+      { "name": "First Dive Experience", "description": "First dive with guiding, equipment rental, full day boat trip, snorkeling without limits, lunch and refreshments", "amount": "75", "currency": "JOD", "popular": true },
+      { "name": "Two Dives / Day", "description": "Two dives per day for certified divers, full day boat trip, 10:00 AM - 2:00 PM with lunch and refreshments", "amount": "80", "currency": "JOD", "popular": false },
+      { "name": "Two Dives + Equipment", "description": "Two dives per day with full equipment, guiding, full day boat trip, 10:00 AM - 2:00 PM with lunch and refreshments", "amount": "100", "currency": "JOD", "popular": false },
+      { "name": "Sunset Experience", "description": "A magical 2-hour sunset tour including refreshments aboard our beautiful boats", "amount": "20", "currency": "JOD", "popular": false },
+      { "name": "Private Tour", "description": "Exclusive private tour per hour. Food and beverages available upon request (extra charge)", "amount": "150", "currency": "JOD/hr", "popular": false },
+      { "name": "Equipment Rental", "description": "Full diving equipment rental for certified divers per day", "amount": "20", "currency": "JOD/day", "popular": false, "equipment": true }
+    ]
+  },
+  "experience": {
+    "label": "Your Journey",
+    "title": "The Experience",
+    "steps": [
+      { "number": "01", "title": "Welcome Aboard", "description": "Board one of our beautiful boats at Aqaba's shore. Meet your experienced crew and fellow adventurers in a friendly, welcoming atmosphere." },
+      { "number": "02", "title": "Sail to Paradise", "description": "Cruise along the stunning Red Sea coastline to the best diving localities, situated 15-17 km from town, enjoying breathtaking views of four countries." },
+      { "number": "03", "title": "Dive & Explore", "description": "Guided diving and snorkeling with PADI-certified professionals. Whether it's your first dive or you're exploring wrecks — we ensure safety and wonder in equal measure." },
+      { "number": "04", "title": "Fresh BBQ Lunch", "description": "Enjoy a delicious BBQ grilled on deck — fresh fish, chicken, salads, hummus, and grilled pita. Relax on the sun deck between dives." },
+      { "number": "05", "title": "Sunset Return", "description": "End your perfect day with a magical return as the sun sets over the Red Sea, painting the sky in gold and crimson. An experience you'll never forget." }
+    ],
+    "badges": [
+      { "text": "PADI Certified" },
+      { "text": "20+ Years Experience" },
+      { "text": "12,000+ Dives" },
+      { "text": "Small Groups" }
+    ]
+  },
+  "reviews": {
+    "label": "Testimonials",
+    "title": "What Our Guests Say",
+    "items": [
+      { "text": "\"An amazing dive company with great guides and boat crew — very friendly, helpful and professional. Yazan is an excellent dive master; very good communicator, very knowledgeable and makes you feel very safe.\"", "author": "— TripAdvisor Reviewer" },
+      { "text": "\"We spent a day snorkeling with Yazan and his team. The boat was beautiful, the team was lovely, and the snorkeling was fantastic. It was the highlight of our time in Aqaba!\"", "author": "— TripAdvisor Reviewer" },
+      { "text": "\"Nothing but praise for Yazan and his team on the Barakah! I was talked into my first dive and it was outstanding. The boat is huge, very well maintained, and the BBQ lunch was incredible.\"", "author": "— TripAdvisor Reviewer" },
+      { "text": "\"You should observe the miracles of the underwater world, feel the fascination of the water life face to face — it is just amazing. Diving lessons are arranged in atmosphere of honor, friendship and fun.\"", "author": "— Sea Guard Experience" }
+    ]
+  },
+  "contact": {
+    "label": "Get in Touch",
+    "title": "Contact Us",
+    "description": "Need more information? Give us a call or send us an email!",
+    "location": { "title": "Location", "text": "Queen Rania Street, Aqaba 77110, Jordan" },
+    "phone": { "title": "Phone", "text": "Contact us for details" },
+    "email": { "title": "Email", "text": "Send us a message below" },
+    "socialLabels": { "facebook": "Facebook", "instagram": "Instagram", "tripadvisor": "TripAdvisor", "google": "Google Reviews" },
+    "form": { "title": "Send Us a Message", "name": "Your Name", "email": "Your Email", "subject": "Subject", "message": "Your Message", "submit": "Send Message" }
+  },
+  "footer": {
+    "brand": { "name": "Sea Guard", "description": "Diving and Snorkeling at Jordan's Aqaba Coral Reefs. Enjoy your adventure with professional divers and high quality service." },
+    "links": { "title": "Quick Links", "items": ["Aqaba Bay", "About Us", "Our Fleet", "Pricing", "Contact"] },
+    "visitUs": { "title": "Visit Us", "street": "Queen Rania Street", "city": "Aqaba 77110, Jordan", "site": "c-guard.net" },
+    "copyright": "© 2003 - 2026 Sea Guard. All rights reserved."
+  }
+}

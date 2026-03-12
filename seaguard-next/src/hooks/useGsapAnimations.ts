@@ -20,37 +20,25 @@ export function useGsapAnimations() {
 
     function initAnimations(gsap: any, ScrollTrigger: any) {
       // ========================================
-      // Hero — Cinematic entrance
+      // Hero — Clean cinematic entrance
       // ========================================
       const heroTl = gsap.timeline({ delay: 0.3 });
       heroTl
-        .from('.hero-badge', { y: -30, opacity: 0, duration: 0.8, ease: 'power3.out' })
-        .from('.hero-title-main', { y: 80, opacity: 0, duration: 1.2, ease: 'power4.out' }, '-=0.4')
-        .from('.hero-subtitle', { y: 50, opacity: 0, duration: 0.9, ease: 'power3.out' }, '-=0.6')
-        .from('.hero-tagline', { y: 30, opacity: 0, duration: 0.8, ease: 'power3.out' }, '-=0.5')
-        .from('.hero-cta-group', { y: 30, opacity: 0, duration: 0.7, ease: 'power3.out' }, '-=0.3')
-        .from('.hero-scroll-indicator', { opacity: 0, y: 20, duration: 1 }, '-=0.2')
-        .from('.hero-float', { opacity: 0, scale: 0, duration: 1.5, stagger: 0.3, ease: 'elastic.out(1, 0.5)' }, '-=1');
+        .from('.hero-tagline', { y: 20, opacity: 0, duration: 0.8, ease: 'power3.out' })
+        .from('.hero-title-word', { y: 80, opacity: 0, duration: 1, stagger: 0.15, ease: 'power4.out' }, '-=0.4')
+        .from('.hero-subtitle', { y: 30, opacity: 0, duration: 0.8, ease: 'power3.out' }, '-=0.4')
+        .from('.hero-cta', { y: 20, opacity: 0, duration: 0.7, ease: 'power3.out' }, '-=0.3')
+        .from('.hero-scroll-indicator', { opacity: 0, y: 20, duration: 1 }, '-=0.2');
 
       // Hero parallax on scroll
       gsap.to('.hero-content', {
         scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 1 },
-        y: 150, opacity: 0, ease: 'none',
+        y: 120, opacity: 0, ease: 'none',
       });
 
-      gsap.to('.hero-depth-1', {
+      gsap.to('.hero-glow', {
         scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 1 },
-        y: 80, ease: 'none',
-      });
-
-      gsap.to('.hero-depth-2', {
-        scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 1 },
-        y: 40, ease: 'none',
-      });
-
-      gsap.to('.hero-float', {
-        scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 1 },
-        y: -60, rotation: 15, ease: 'none',
+        y: 60, scale: 1.3, opacity: 0, ease: 'none',
       });
 
       // ========================================

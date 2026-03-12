@@ -13,6 +13,7 @@ import ContactSection from '@/components/sections/ContactSection';
 import Footer from '@/components/layout/Footer';
 import WaveDivider from '@/components/layout/WaveDivider';
 import AnimationProvider from '@/components/AnimationProvider';
+import WaterBubbles from '@/components/effects/WaterBubbles';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -32,6 +33,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
     <>
       <Preloader text={dict.preloader.text} />
       <Navbar dict={dict} locale={locale} />
+      <WaterBubbles />
       <AnimationProvider>
         <HeroSection dict={dict} />
         <WaveDivider />
